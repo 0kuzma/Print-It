@@ -111,10 +111,21 @@ header {
 	min-height: 470px;
 	position: relative;
 }
+
+#banner .carrousel__box {
+	display: flex;
+	overflow: hidden;
+}
+
+.carrousel__box .carrousel__box-content {
+	position: relative;
+	height: 30rem;
+	min-width: 100%;
+}
+
 .banner-img {
 	position: absolute;
 	width: 100%;
-	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
@@ -154,6 +165,8 @@ header {
 }
 /* Fin du code CSS pour le carousel */
 #banner p {
+	position: relative;
+	top: 160px;
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
 	font-size: 50px;
