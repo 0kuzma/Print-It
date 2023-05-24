@@ -3,6 +3,9 @@ const slider = document.querySelector('.slider');
 const leftArrow = document.querySelector('.left');
 const rightArrow = document.querySelector('.right');
 
+//dots
+const indicatorDots = document.querySelector(".controls ul");
+
 // position of slider
 let levelSlider = 0;
 
@@ -13,6 +16,9 @@ leftArrow.addEventListener("click", function() {
     } else {
         levelSlider = 3;
     }
+	// dots add and remove
+    document.querySelector(".selected").classList.remove("selected");
+    indicatorDots.children[levelSlider].classList.add("selected");
 	// slider move
     slider.style.transform = "translate(" + (levelSlider) * -25 + "%)";
 });
@@ -24,6 +30,9 @@ rightArrow.addEventListener("click", function() {
     } else {
         levelSlider = 0;
     }
+	// dots add and remove
+    document.querySelector(".selected").classList.remove("selected");
+    indicatorDots.children[levelSlider].classList.add("selected");
 	// slider move
     slider.style.transform = "translate(" + (levelSlider) * -25 + "%)";
 });
