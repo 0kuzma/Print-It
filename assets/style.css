@@ -120,9 +120,10 @@ header {
   .slider {
 	display: flex;
 	height: 100%;
-	width: 400.9%;
+	width: 400%;
 	/* caroussel effect */
 	transition: all 0.3s ease;
+	background-color: black;
 	/* caroussel effect */
   }
   
@@ -131,6 +132,11 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  }
+
+  .slider section img {
+	height: auto;
+    max-width: 100%;
   }
   
   .controls .arrow {
