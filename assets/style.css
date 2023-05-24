@@ -103,55 +103,60 @@ header {
 }
 
 #banner {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 470px;
-	position: relative;
+	max-width: 1440px;
+    min-height: 470px;
+    margin: auto;
 }
 
-#banner .carrousel__box {
-	display: flex;
-	overflow: hidden;
-}
-
-.carrousel__box .carrousel__box-content {
-	position: relative;
-	height: 30rem;
-	min-width: 100%;
-}
-
-.banner-img {
-	position: absolute;
-	width: 100%;
-	z-index: -1;
-	object-fit: cover;
-	object-position: center;
-}
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
-#banner .arrow {
+  
+  .caroussel {
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .slider {
 	display: flex;
-	justify-content: space-between;
-	padding: 0px 4%;
-    width: 100%;
+	height: 100%;
+	width: 400.9%;
+	/* caroussel effect */
+	transition: all 0.3s ease;
+	/* caroussel effect */
+  }
+  
+  .slider section {
+	flex-basis: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .controls .arrow {
 	position: absolute;
-}
-#banner .arrow_left {
-	left: 10px;
-}
-#banner .arrow_right {
-	right: 10px;
-}
+	top: 50%;
+	cursor: pointer;
+  }
+  
+  .arrow.left {
+	left: 10%;
+  }
+  
+  .arrow.right {
+	right: 10%;
+  }
+  
+  .controls ul {
+	display: flex;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%);
+  }
+  
 /* Gestion des points du carrousel */
-.dots {
-	position: absolute;
-	bottom: 40px;
-	display: flex;
-}
-.dot {
+.controls ul li {
 	margin-inline: 5px;
 	width: 13px;
 	height: 13px;
@@ -159,10 +164,12 @@ header {
 	border: 3px solid #fff;
 	border-radius: 100%;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
-}
-.dot_selected {
+	cursor: pointer;
+  }
+  
+  .controls ul li.selected {
 	background-color: #fff;
-}
+  } 
 /* Fin du code CSS pour le carousel */
 #banner p {
 	position: relative;
@@ -176,7 +183,6 @@ header {
 	text-align: center;
 }
 #banner span {
-	display: block;
 	font-weight: 400;
 	font-size: 30px;
 }
