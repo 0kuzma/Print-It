@@ -1,18 +1,18 @@
-const slides = [
-	{
-		"image":"slide1.jpg",
-		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
-	},
-	{
-		"image":"slide2.jpg",
-		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
-	},
-	{
-		"image":"slide3.jpg",
-		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
-	},
-	{
-		"image":"slide4.png",
-		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
-	}
-]
+const slider = document.querySelector('.slider');
+//arrows
+const leftArrow = document.querySelector('.left');
+const rightArrow = document.querySelector('.right');
+
+// position of slider
+let levelSlider = 0;
+
+// arrow function left
+leftArrow.addEventListener("click", function() {
+    if (levelSlider > 0) {
+        levelSlider--;
+    } else {
+        levelSlider = 3;
+    }
+	// slider move
+    slider.style.transform = "translate(" + (levelSlider) * -25 + "%)";
+});
