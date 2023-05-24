@@ -16,3 +16,14 @@ leftArrow.addEventListener("click", function() {
 	// slider move
     slider.style.transform = "translate(" + (levelSlider) * -25 + "%)";
 });
+
+// arrow function right
+rightArrow.addEventListener("click", function() {
+    if (levelSlider < 3) {
+        levelSlider++;
+    } else {
+        levelSlider = 0;
+    }
+	// slider move
+    slider.style.transform = "translate(" + (levelSlider) * -25 + "%)";
+});
